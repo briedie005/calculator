@@ -32,21 +32,16 @@ export function calc (localArr) {
     else if (length >= 9) {
         length += 2;
     }
-    
-    console.log(localArr)
-    console.log("Begin Length " + length);
-    console.log('3rd: ' + length%3)
 
     for (let i=0; i < length/3; i++) {
 
       console.log('Loop ' + i)
 
       let num1 = localArr[0]; 
-      console.log(num1);
+        
       let operator = localArr[1];
 
       let num2 = localArr[2];
-      console.log(num2);
   
       for (let j=0; j<3; j++) {localArr.shift();}
   
@@ -83,5 +78,6 @@ export function calc (localArr) {
     
     let final = localArr;
     localArr = [];
+    console.log('Answer: ' + final);
     return final;
 }  
