@@ -48,7 +48,6 @@ class App extends react.Component {
   }
 
   addNumber(val){
-    console.log('addNumber: equationArr= ' + this.state.equationArr)
     if (this.state.equationArr[0] !== 'new') {
 
       this.setState({
@@ -73,7 +72,6 @@ class App extends react.Component {
   }
 
   equation(val){
-    console.log('Before putting into equationArr: ' + this.state.number);
   
     this.setState({
       equationArr : this.state.equationArr.filter(i => i !== 'new')
@@ -103,8 +101,6 @@ class App extends react.Component {
       equalBoolean : !this.state.equalBoolean
     });
     document.getElementById('D').disabled = true;
-    console.log('Equation at beginning of equal: ' + this.state.eqationArr)
-    console.log('This should only be seen once')
   }
 
   clear () {
